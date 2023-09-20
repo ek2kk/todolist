@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+
+{% block body %}
+<div class="features">
+  <h1>Список дел</h1>
+
+  {% if tag == 1 %}
+  {% for todo in todos %}
+  {% if todo.is_done is False %}
+  <a href="{% url 'todo_update' todo.id %}" class="todo-item">
+    <div class="alert alert-warning">
+      <h3>{{ todo.id }}: {{ todo.title }}</h3>
+      <p class="todo-description">{{ todo.description }}</p>
+      <p class="date">{{ todo.date_created }}</p>
+      <p class="date-to-be-completed">
+        Срок: {{ todo.date_to_complete }}
+      </p>
+    </div>
+  </a>
+  <a href="{% url 'todo_delete' todo.id %}" class="btn btn-danger">Удалить</a>
+    <a href="{% url 'todo_done' pk=todo.id %}" class="btn btn-success">Сделано</a>
+  {% endif %}
+  {% endfor %}
+  {% elif tag == 0 %}
+  <h3>У вас нет дел.</h3>
+  {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+body {
+    background: #fafafa;
+}
+
+aside {
+    float: left;
+    background: #b3b3b3;
+    width: 350px;
+    padding: 1.5%;
+    height: 500px;
+    color: #fafafa;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 17px;
+    box-shadow: 3px 3px 5px #000;
+}
+a {
+    color: #fafafa;
+    text-decoration: none;
+
+}
+aside img {
+    width: 50px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -8px;
+}
+
+aside .logo {
+    color: #000;
+}
+
+
+aside h3 {
+    margin-top: 30px;
+    font-size: 40px;
+}
+aside ul {
+    list-style: none;
+}
+aside ul a {
+    display: block;
+    margin-top: 10px;
+    margin-left: -10px;
+    font-size: 20px;
+}
+
+aside ul a:hover {
+    color: #000;
+    font-weight: bold;
+    transition: transform .4s ease;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color:#303030;
+    margin-top: 100px;
+    text-align: center;
+    width: 70%;
+}
+
+main .features h1 {
+    font-size: 50px;
+}
+main .features p {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.alert-warning {
+    clear: both;
+    width: 700px;
+    margin: 20px auto;
+    background-color: #fafafa;
+    border-color: #000;
+    color:#303030;
+    box-shadow: 3px 3px 5px #303030;
+}
+
+.alert-warning .todo-description {
+    text-align: left;
+}
+.alert-warning .date, .alert-warning .date-to-be-completed {
+    text-align: left;
+}
+.alert-warning .date-to-be-completed {
+    font-weight: bold;
+}
+
+form {
+    margin: 50px 20%;
+}
+
+.btn-info {
+    background-color: #fafafa;
+    border: none;
+}
+.btn-info:hover {
+    background-color: #000;
+    color: #fafafa;
+}
+
+.todo-item .alert-warning:hover{
+    transform: scale(1.05);
+    transition: transform .4s ease;
+}
+

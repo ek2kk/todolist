@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+
+{% block body %}
+<div class="features">
+  <h1>Задача</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.title }}<br>
+    {{ form.date_to_complete }}<br>
+    {{ form.description }}<br>
+<!--    {{ form.date_created }}<br> ТАКЖЕ РАСКОММЕНТИРОВАТЬ ЕСЛИ НУЖНО БУДЕТ ВВОДИТЬ ВРУЧНУЮ-->
+    <span>{{ error }}</span>
+    <button class="btn btn-success" type="submit">Сохранить</button>
+  </form>
+</div>
+{% endblock %}
+

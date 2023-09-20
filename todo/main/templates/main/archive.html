@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block body %}
+<div class="features">
+  <h1>Архив</h1>
+{% if tag == 0 %}
+  {% for todo in todos %}
+  {% if todo.is_done is True %}
+  <a href="{% url 'todo_update' todo.id %}" class="todo-item">
+    <div class="alert alert-warning">
+      <h3>{{ todo.id }}: {{ todo.title }}</h3>
+      <p class="todo-description">{{ todo.description }}</p>
+    </div>
+  </a>
+  {% endif %}
+  {% endfor %}
+  {% else %}
+  <h3>У вас нет заархивированных дел.</h3>
+  {% endif %}
+</div>
+
+{% endblock %}
